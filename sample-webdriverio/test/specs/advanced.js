@@ -18,7 +18,7 @@ describe('Advanced reporting test', () => {
   });
 
   beforeEach(function () {
-    logger.info(`Test ${this.currentTest.title} satrted`);
+    logger.info(`Test ${this.currentTest.title} started`);
   });
 
   it('Tracking test maintainer', async () => {
@@ -39,13 +39,13 @@ describe('Advanced reporting test', () => {
     // will be attached to this test only
     currentTest.attachLabel('feature', 'login');
     logger.info(
-      'Example shows how to add labels using annotation for a specific test'
+      'Example shows how to add labels for a specific test'
     );
 
     // will be attached to the entire run
     currentLaunch.attachLabel('platform', 'LINUX');
     logger.info(
-      'Example shows how to add labels using annotation for a specific launch'
+      'Example shows how to add labels for a whole launch'
     );
   });
 
@@ -58,28 +58,28 @@ describe('Advanced reporting test', () => {
       'Zebrunner documentation',
       'https://zebrunner.com/documentation/'
     );
-    logger.info('Example shows how to attach reference for a specific test');
+    logger.info('Example shows how to attach a reference for a specific test');
     await browser.pause(3000);
     // will be attached to the entire run
     currentLaunch.attachArtifactReference(
       'Zebrunner WebdriverIO reporting agent',
       'https://zebrunner.com/documentation/reporting/webdriverio/'
     );
-    logger.info('Example shows how to attach reference for a specific launch');
+    logger.info('Example shows how to attach a reference for a whole launch');
   });
 
   it('Reverting test registration', async () => {
     if (new Date().getDay() === 1) {
       currentTest.revertRegistration();
-      logger.info('Example shows how to revert test registration at runtime.');
+      logger.info('Example shows how to revert test registration at runtime');
     }
     await browser.url(
       'https://zebrunner.com/documentation/reporting/webdriverio/#reverting-test-registration'
     );
-    logger.info('This test will not reported on Monday.');
+    logger.info('This test will not be reported on Monday');
   });
 
   afterEach(function () {
-    logger.info(`Test  ${this.currentTest.title} finished`);
+    logger.info(`Test ${this.currentTest.title} finished`);
   });
 });

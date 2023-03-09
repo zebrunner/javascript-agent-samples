@@ -6,7 +6,7 @@ Your guide to run the first WebdriverIO test with reporting to Zebrunner.
 
 ## Preconditions
 
-Before you can start configuring Zebrunner WebdriverIO reporting agent, you need to create a free Zebrunner workspace at https://zebrunner.com/
+Before configuring Zebrunner WebdriverIO reporting agent, you need to create a free Zebrunner workspace at https://zebrunner.com/.
 
 ## Configuration
 
@@ -27,11 +27,11 @@ In Zebrunner:
 - Click on "API Tokens" tab;
 - Press "Token" button, create a token and copy it before closing the dialog (you won't be able to see the token later).
 
-Define launch configuration (override defaults if needed) and copy content below to the list of reporters to the wdio.conf.js file.
+Define launch configuration (override defaults if needed) with obtained token and copy content below to the list of reporters to the `wdio.conf.js` file.
 
 #### **`wdio.conf.js`**
 
-```
+```js
 ZebrunnerReporter,
       {
         enabled: true,
@@ -53,16 +53,15 @@ ZebrunnerReporter,
 In Zebrunner:
 
 - Navigate to "Automation -> Launches" page by selecting the menu from left sidebar;
-- Click on key icon from the top right side on Launches page;
-  You will see 'Hub Access' popup where you can copy username and access key for remote Zebrunner Selenium Grid;
+- Click on key icon from the top right side on Launches page. You will see 'Hub Access' popup where you can copy username and access key for remote Zebrunner Selenium Grid;
 - Set copied values for variables `user` and `key`.
 
-Configure desired capabilities and insert snippet below to wdio.conf.js file.
+Configure desired capabilities and insert snippet below with obtained credentials to `wdio.conf.js` file.
 
 #### **`wdio.conf.js`**
 
-```
-protocol: 'https',
+```js
+  protocol: 'https',
   hostname: 'engine.zebrunner.com',
   port: 443,
   path: '/wd/hub',
@@ -81,7 +80,7 @@ protocol: 'https',
 
 ### _Step 4: Execute the tests_
 
-Please run the following command in the terminal.
+Please run the following command in the terminal:
 
 ```
 npm install && npm run test

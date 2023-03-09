@@ -1,7 +1,8 @@
 {
-    "name": "webdriverio-tests",
-    "version": "0.1.0",
-    "private": true,
+    "name": "sample-webdriverio",
+    "version": "1.0.0",
+    "description": "Webdriverio agent sample of Zebrunner usage",
+    "main": "index.js",
     "devDependencies": {
         "@wdio/cli": "^8.3.10",
         "@wdio/local-runner": "^8.3.10",
