@@ -1,4 +1,4 @@
-# Zebrunner WebdriverIO reporting agent
+# Zebrunner WebdriverIO reporting agent sample
 
 ## sample-webdriverio
 
