@@ -16,10 +16,10 @@ module.exports = {
   reporterOptions: {
     zebrunnerConfig: {
       enabled: true,
-      projectKey: 'ANNAS',
+      projectKey: 'DEF',
       server: {
-        hostname: 'https://solvdinternal.zebrunner.com/',
-        accessToken: 'CAve1wEDfcbfWuhMdtoPHAaDdaMCOyaUUR7ykFRvi7YwipX6Ee',
+        hostname: 'https://<workspace>.zebrunner.com/',
+        accessToken: '<accessToken>',
       },
       run: {
         displayName: "Zebrunner Demo Launch",
