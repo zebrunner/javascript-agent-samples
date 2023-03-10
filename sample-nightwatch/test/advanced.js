@@ -21,7 +21,7 @@ describe('Advanced reporting test', () => {
 
         browser.navigateTo('https://github.com/zebrunner/javascript-agent-nightwatch#tracking-test-maintainer');
 
-        CurrentTest.setMaintainer(browser, 'skywalker');
+        CurrentTest.setMaintainer(browser, 'hpotter');
     });
 
     it('Attaching labels to test and test run', (browser) => {

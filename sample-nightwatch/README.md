@@ -71,8 +71,6 @@ module.exports = {
     test_settings: {
         zebrunner: ZebrunnerConfigurator.configureLauncher({
             selenium: {
-                start_process: false,
-                server_path: '',
                 host: 'engine.zebrunner.com',
                 port: 443,
             },
@@ -87,9 +85,7 @@ module.exports = {
                 platformName: 'linux',
                 browserName: 'chrome',
                 browserVersion: '109.0',
-                'goog:chromeOptions': {
-                    w3c: true,
-                },
+                'enableVideo': true
             },
         }),
     },

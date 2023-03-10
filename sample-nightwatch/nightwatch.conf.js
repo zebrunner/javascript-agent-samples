@@ -16,10 +16,10 @@ module.exports = {
   reporterOptions: {
     zebrunnerConfig: {
       enabled: true,
-      projectKey: 'DEF',
+      projectKey: 'ANNAS',
       server: {
-        hostname: 'https://<workspace>.zebrunner.com/',
-        accessToken: '<accessToken>',
+        hostname: 'https://solvdinternal.zebrunner.com/',
+        accessToken: 'CAve1wEDfcbfWuhMdtoPHAaDdaMCOyaUUR7ykFRvi7YwipX6Ee',
       },
       run: {
         displayName: "Zebrunner Demo Launch",
@@ -69,8 +69,6 @@ module.exports = {
     // Replace the following block with obtained Zebrunner Selenium Grid information and desired capabilities
     zebrunner: ZebrunnerConfigurator.configureLauncher({
       selenium: {
-        start_process: false,
-        server_path: '',
         host: 'engine.zebrunner.com',
         port: 443,
       },
@@ -82,10 +80,10 @@ module.exports = {
         start_process: false,
       },
       desiredCapabilities: {
+        platformName: 'linux',
         browserName: 'chrome',
-        'goog:chromeOptions': {
-          w3c: true,
-        },
+        browserVersion: '109.0',
+        'enableVideo': true
       },
     }),
     ////////////////////////////////////////////////////////////////////////////////////////

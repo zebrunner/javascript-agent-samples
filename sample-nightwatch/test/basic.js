@@ -33,7 +33,7 @@ describe('Basic reporting test', function () {
         const searchValue = 'Nightwatch';
         performGoogleSearch(searchValue);
 
-        browser.verify.urlEquals(`search?q=${searchValue}`);
+        browser.verify.urlContains(`search?q=${searchValue}`);
         browser.verify.textEquals(
             {
                 selector: '//*[@id="search"]//a',
