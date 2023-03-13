@@ -1,0 +1,11 @@
+{
+    "reporter": "@zebrunner/javascript-agent-cypress",
+    "reporterOptions": {
+        "reportingServerHostname": "https://<workspace>.zebrunner.com/",
+        "reportingServerAccessToken": "<accessToken>",
+        "reportingProjectKey": "<project_key>",
+        "reportingRunEnvironment": "DEMO",
+        "reportingRunBuild": "2.41.2.2431-SNAPSHOT",
+        "reportingRunDisplayName": "Zebrunner Demo Launch"
+    }
+}

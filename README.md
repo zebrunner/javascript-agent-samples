@@ -3,3 +3,5 @@
 - [WebdriverIO](https://github.com/zebrunner/javascript-agent-samples/tree/main/sample-webdriverio)
 
 - [Nightwatch](https://github.com/zebrunner/javascript-agent-samples/tree/main/sample-nightwatch)
+
+- [Cypress](https://github.com/zebrunner/javascript-agent-samples/tree/main/sample-cypress)

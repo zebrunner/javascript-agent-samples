@@ -1,5 +1,8 @@
 .DS_Store
+.AppleDouble
 node_modules/
 tests_output/
 screens/
 logs/
+screenshots/
+videos/
