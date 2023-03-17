@@ -18,7 +18,7 @@ describe('Basic reporting test', function () {
 
     it('Google search should be passed', (browser) => {
         const searchValue = 'Zebrunner';
-        performGoogleSearch(searchValue);
+        performGoogleSearch(browser, searchValue);
 
         browser.assert.urlContains(`search?q=${searchValue}`);
         browser.assert.textContains(
@@ -31,7 +31,7 @@ describe('Basic reporting test', function () {
 
     it('Google search should be failed', (browser) => {
         const searchValue = 'Nightwatch';
-        performGoogleSearch(searchValue);
+        performGoogleSearch(browser, searchValue);
 
         browser.verify.urlContains(`search?q=${searchValue}`);
         browser.verify.textEquals(
@@ -42,10 +42,12 @@ describe('Basic reporting test', function () {
             searchValue);
     });
 
-    function performGoogleSearch(searchValue) {
+    function performGoogleSearch(browser, searchValue) {
         browser.navigateTo(URL)
             .waitForElementVisible("input[name=q]")
+            .takeScreenshot()
             .sendKeys("input[name=q]", [searchValue, browser.Keys.ENTER])
-            .waitForElementVisible("#rso");
+            .waitForElementVisible("#rso")
+            .takeScreenshot();
     }
 });

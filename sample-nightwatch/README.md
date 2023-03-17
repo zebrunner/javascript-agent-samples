@@ -24,7 +24,7 @@ cd javascript-agent-samples/sample-nightwatch
 In Zebrunner:
 
 - Navigate to "Account and profile" section by clicking on the User icon from the top right side;
-- Click on "API Tokens" tab;
+- Click on "API Access" tab;
 - Press "Token" button, create a token and copy it before closing the dialog (you won't be able to see the token later).
 
 Define launch configuration (override defaults if needed) with obtained token and copy content below to the `nightwatch.conf.js` file.
@@ -42,7 +42,7 @@ module.exports = {
                 hostname: 'https://<workspace>.zebrunner.com/',
                 accessToken: '<accessToken>',
             },
-            run: {
+            launch: {
                 displayName: "Zebrunner Demo Launch",
                 build: '2.41.2.2431-SNAPSHOT',
                 environment: 'QA',

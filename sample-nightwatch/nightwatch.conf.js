@@ -5,7 +5,7 @@ module.exports = {
   src_folders: ['test'],
 
   page_objects_path: [],
-  custom_commands_path: [],
+  custom_commands_path: ['nightwatch/commands'],
   custom_assertions_path: [],
   plugins: [],
 
@@ -21,7 +21,7 @@ module.exports = {
         hostname: 'https://<workspace>.zebrunner.com/',
         accessToken: '<accessToken>',
       },
-      run: {
+      launch: {
         displayName: "Zebrunner Demo Launch",
         build: '2.41.2.2431-SNAPSHOT',
         environment: 'QA',

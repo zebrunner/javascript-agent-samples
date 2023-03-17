@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { ZebrunnerReporterAPI, CurrentTestRun, CurrentTest } = require("@zebrunner/javascript-agent-nightwatch");
+const { ZebrunnerReporterAPI, CurrentLaunch, CurrentTest } = require("@zebrunner/javascript-agent-nightwatch");
 
 describe('Advanced reporting test', () => {
 
@@ -31,7 +31,7 @@ describe('Advanced reporting test', () => {
         CurrentTest.attachLabel(browser, 'feature', 'labels');
 
         console.log('Example shows how to add labels for a whole test run');
-        CurrentTestRun.attachLabel('configuration', 'chrome', 'linux');
+        CurrentLaunch.attachLabel('configuration', 'chrome', 'linux');
     });
 
     it('Attaching artifact references to test and test run', (browser) => {
@@ -41,7 +41,7 @@ describe('Advanced reporting test', () => {
         CurrentTest.attachArtifactReference(browser, 'Github Nightwatch agent', 'https://github.com/zebrunner/javascript-agent-nightwatch');
 
         console.log('Example shows how to attach a reference for a whole test run');
-        CurrentTestRun.attachArtifactReference('Zebrunner documentation', 'https://zebrunner.com/documentation/');
+        CurrentLaunch.attachArtifactReference('Zebrunner documentation', 'https://zebrunner.com/documentation/');
     });
 
     it('Attaching artifacts to test and test run', (browser) => {
@@ -52,7 +52,7 @@ describe('Advanced reporting test', () => {
 
         console.log('Example shows how to attach an artifact from buffer for a whole test run');
         const buffer = fs.readFileSync("./package.json")
-        CurrentTestRun.uploadArtifactBuffer('File artifact', 'application/json', buffer);
+        CurrentLaunch.uploadArtifactBuffer('File artifact', 'application/json', buffer);
     });
 
     it('Reverting test registration', (browser) => {

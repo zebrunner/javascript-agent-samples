@@ -19,6 +19,6 @@
     "nightwatch": "^2.6.16"
   },
   "dependencies": {
-    "@zebrunner/javascript-agent-nightwatch": "^1.0.9"
+    "@zebrunner/javascript-agent-nightwatch": "^1.0.10"
   }
 }
