@@ -1,15 +1,15 @@
 {
-    "name": "sample-cypress",
-    "version": "1.0.0",
-    "description": "Zebrunner Cypress reporting agent sample",
-    "scripts": {
-        "test": "npx cypress run --headed --spec cypress/integration/basic.cy.js"
-    },
-    "dependencies": {
-        "@zebrunner/javascript-agent-cypress": "^1.0.43",
-        "cypress": "^9.6.1",
-        "cypress-wait-until": "^1.7.2",
-        "cypress-xpath": "^2.0.1",
-        "standard": "^16.0.4"
-    }
+  "name": "sample-cypress",
+  "version": "1.0.0",
+  "description": "Zebrunner Cypress reporting agent sample",
+  "scripts": {
+    "test": "npx cypress run --headed --spec cypress/integration/basic.cy.js"
+  },
+  "dependencies": {
+    "@zebrunner/javascript-agent-cypress": "^1.0.43",
+    "cypress": "^9.7.0",
+    "cypress-wait-until": "^1.7.2",
+    "cypress-xpath": "^2.0.1",
+    "standard": "^16.0.4"
+  }
 }
