@@ -3,7 +3,7 @@ describe('Google search', () => {
   const searchValue = 'Zebrunner';
 
   it('Should pass', { 'owner': 'asukhodolova' }, () => {
-    cy.zebrunnerTestCaseKey('ZPT-3010', 'ZPT-3679');
+    cy.zebrunnerTestCaseKey('ZTP-3010', 'ZTP-3679');
 
     cy.visit(url).contains('Google');
 
@@ -15,7 +15,7 @@ describe('Google search', () => {
   });
 
   it('Should fail', () => {
-    cy.zebrunnerTestCaseKey('ZPT-3011', 'ZPT-3680');
+    cy.zebrunnerTestCaseKey('ZTP-3011', 'ZTP-3680');
 
     cy.visit(url).contains('Google');
 

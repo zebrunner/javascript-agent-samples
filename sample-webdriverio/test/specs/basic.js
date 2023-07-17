@@ -17,7 +17,7 @@ describe('Basic reporting test', () => {
   });
 
   it('Google search should be passed', async () => {
-    zebrunner.testCaseKey('ZPT-3010', 'ZPT-3679');
+    zebrunner.testCaseKey('ZTP-3010', 'ZTP-3679');
 
     logger.info(`Opening ${url}`);
     await browser.url(url);
@@ -34,7 +34,7 @@ describe('Basic reporting test', () => {
   });
 
   it('Google search should be failed', async () => {
-    zebrunner.testCaseKey('ZPT-3011', 'ZPT-3680');
+    zebrunner.testCaseKey('ZTP-3011', 'ZTP-3680');
 
     logger.info(`Opening ${url}`);
     await browser.url(url);
