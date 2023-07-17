@@ -44,9 +44,9 @@ describe('Basic reporting test', function () {
 
     function performGoogleSearch(browser, searchValue) {
         browser.navigateTo(URL)
-            .waitForElementVisible("input[name=q]")
+            .waitForElementVisible("[name=q]")
             .takeScreenshot()
-            .sendKeys("input[name=q]", [searchValue, browser.Keys.ENTER])
+            .sendKeys("[name=q]", [searchValue, browser.Keys.ENTER])
             .waitForElementVisible("#rso")
             .takeScreenshot();
     }

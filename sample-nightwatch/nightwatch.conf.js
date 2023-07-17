@@ -22,7 +22,7 @@ module.exports = {
         accessToken: '<accessToken>',
       },
       launch: {
-        displayName: "Zebrunner Demo Launch",
+        displayName: "Nightwatch Demo Launch",
         build: '2.41.2.2431-SNAPSHOT',
         environment: 'QA',
       },
