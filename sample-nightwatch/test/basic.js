@@ -1,4 +1,5 @@
 const { ZebrunnerReporterAPI } = require("@zebrunner/javascript-agent-nightwatch");
+const { Zebrunner } = require("@zebrunner/javascript-agent-nightwatch");
 
 describe('Basic reporting test', function () {
 
@@ -17,6 +18,8 @@ describe('Basic reporting test', function () {
     });
 
     it('Google search should be passed', (browser) => {
+        Zebrunner.testCaseKey('ZPT-3010', 'ZPT-3679');
+
         const searchValue = 'Zebrunner';
         performGoogleSearch(browser, searchValue);
 
@@ -30,6 +33,8 @@ describe('Basic reporting test', function () {
     });
 
     it('Google search should be failed', (browser) => {
+        Zebrunner.testCaseKey('ZPT-3011', 'ZPT-3680');
+
         const searchValue = 'Nightwatch';
         performGoogleSearch(browser, searchValue);
 
@@ -44,9 +49,9 @@ describe('Basic reporting test', function () {
 
     function performGoogleSearch(browser, searchValue) {
         browser.navigateTo(URL)
-            .waitForElementVisible("input[name=q]")
+            .waitForElementVisible("*[name=q]")
             .takeScreenshot()
-            .sendKeys("input[name=q]", [searchValue, browser.Keys.ENTER])
+            .sendKeys("*[name=q]", [searchValue, browser.Keys.ENTER])
             .waitForElementVisible("#rso")
             .takeScreenshot();
     }
