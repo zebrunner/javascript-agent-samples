@@ -1,0 +1,14 @@
+{
+  "name": "sample-playwright",
+  "version": "1.0.0",
+  "description": "Playwright agent sample of Zebrunner usage",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@playwright/test": "^1.40.1",
+    "@zebrunner/javascript-agent-playwright": "^0.1.0"
+  },
+  "scripts": {
+    "test": "npx playwright test test/specs/basic.spec.js"
+  }
+}
